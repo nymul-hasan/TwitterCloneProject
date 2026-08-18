@@ -2,16 +2,18 @@
 
 namespace TwitterClone.Domain.Entities
 {
-    public class Retweet
+    public class Retweet :BaseEntity
     {
-        private Guid _userId;
+        
         private Guid _tweetId;
         private DateTime _retweetedAt;
 
-        public Guid UserId
+        public Retweet() : base(Guid.NewGuid())
         {
-            get { return _userId; }
+            //// constrator chaining if base constractor has parameters
         }
+
+
 
         public Guid TweetId
         {

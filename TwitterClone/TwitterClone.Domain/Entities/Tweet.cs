@@ -2,12 +2,17 @@
 
 namespace TwitterClone.Domain.Entities
 {
-    internal class Tweet
+    internal class Tweet : BaseEntity
     {
-        private Guid _id; 
+        
         private Guid _authorId; 
-        private string _content; 
-        public Guid Id { get { return _id; } }
+        private string _content;
+
+        public Tweet() : base(Guid.NewGuid())
+        {
+            //// constrator chaining if base constractor has parameters
+        }
+
         public Guid AuthorId { 
             get { return _authorId; }
         }

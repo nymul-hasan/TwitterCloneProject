@@ -2,22 +2,21 @@
 
 namespace TwitterClone.Domain.Entities
 {
-    public class Notification
+    public class Notification :BaseEntity
     {
-        private Guid _id;
-        private Guid _userId;
+        
+        
         private string _content;
-        private DateTime _createdAt;
 
-        public Guid Id
+
+        public Notification() : base(Guid.NewGuid())
         {
-            get { return _id; }
+            //// constrator chaining if base constractor has parameters
         }
 
-        public Guid UserId
-        {
-            get { return _userId; }
-        }
+
+
+
 
         public string Content
         {

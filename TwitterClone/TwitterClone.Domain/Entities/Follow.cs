@@ -2,11 +2,12 @@
 
 namespace TwitterClone.Domain.Entities
 {
-    public class Follow
+    public class Follow :BaseEntity
     {
         private Guid _followerId;
         private Guid _followeeId;
         private DateTime _followedAt;
+        
 
         public Guid FollowerId
         {

@@ -2,16 +2,17 @@
 
 namespace TwitterClone.Domain.Entities
 {
-    public class Bookmark
+    public class Bookmark :BaseEntity
     {
-        private Guid _userId;
+        
         private Guid _tweetId;
         private DateTime _bookmarkedAt;
 
-        public Guid UserId
+        public Bookmark() : base(Guid.NewGuid())
         {
-            get { return _userId; }
+            //// constrator chaining if base constractor has parameters
         }
+
 
         public Guid TweetId
         {
